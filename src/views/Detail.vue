@@ -271,7 +271,7 @@ export default {
                   term1: params.column.title,
                   type: that.$route.query.type
                     ? that.$route.query.type
-                    : 'openEuler',
+                    : 'openGauss',
                 },
               });
             },
@@ -298,7 +298,7 @@ export default {
           query: {
             term1: col,
             term2: row.categoryLevel,
-            type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+            type: this.$route.query.type ? this.$route.query.type : 'openGauss',
           },
         });
       } else {
@@ -306,7 +306,7 @@ export default {
           name: 'detail',
           query: {
             term2: row.categoryLevel,
-            type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+            type: this.$route.query.type ? this.$route.query.type : 'openGauss',
           },
         });
       }
@@ -427,7 +427,7 @@ export default {
       this.$router.push({
         path: `/testResult/${row.tableId}/${type}/${resultIndex}`,
         query: {
-          type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+          type: this.$route.query.type ? this.$route.query.type : 'openGauss',
         },
       });
     },

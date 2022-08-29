@@ -2,7 +2,7 @@
   <div class="footer">
     <!-- <div class="divider"></div>
     <div class="footerText">
-      This page was built by the jenkins job reproducible_html_openEuler which
+      This page was built by the jenkins job reproducible_html_openGauss which
       is configured via this git repo. There is more information about
       jenkins.debian.net and about reproducible builds of Debian available
       elsewhere.

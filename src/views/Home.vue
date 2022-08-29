@@ -2,7 +2,7 @@
   <div class="home">
     <div class="left">
       <div class="headTitle" @click="goHome">
-        <img src="@/assets/logo.png" />
+        <img src="@/assets/opengauss.png" />
       </div>
       <div class="contentBox">
         <div class="title">Suite/architecture overviews</div>
@@ -45,7 +45,7 @@
       </div>
       <div class="border"></div>
       <div class="contentBox box2">
-        <div class="title">Reproducible OpenEuler overview</div>
+        <div class="title">Reproducible openGauss overview</div>
         <div class="titleInside">
           <img src="@/assets/仪表盘默认.png" />
           <div class="text">Dashboard</div>
@@ -152,9 +152,6 @@ export default {
     goHome() {
       this.$router.push({
         path: '/',
-        query: {
-          type: this.$route.query.type ? this.$route.query.type : 'openEuler',
-        },
       });
     },
   },

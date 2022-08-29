@@ -6,8 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     testedSuite: '',
-    architecture: 'arm64',
-    urlParam: 'openEuler',
+    architecture: 'amd64',
+    urlParam: 'openGauss',
   },
   mutations: {
     changeTestedSuiteVx(state, payload) {

@@ -18,23 +18,23 @@
       </p>
       <br />
       <p>
-        Reproducible openEuler is an effort to apply this to openEuler. Thus
-        openEuler packages are build twice, with a few variations added and then
+        Reproducible openGauss is an effort to apply this to openGauss. Thus
+        openGauss packages are build twice, with a few variations added and then
         the resulting packages from the two builds are compared using
         diffoscope. Please note that this is still at an early stage. Also there
         are more variations expected to be seen in the wild.
       </p>
       <br />
-      <!-- <p class="innerTitle">Missing bits for testing openEuler:</p>
+      <!-- <p class="innerTitle">Missing bits for testing openGauss:</p>
       <Badge
         status="default"
-        text="cross references to Debian notes - and having openEuler specific notes."
+        text="cross references to Debian notes - and having openGauss specific notes."
       /> -->
 
-      <p class="innerTitle">Missing bits for openEuler:</p>
+      <p class="innerTitle">Missing bits for openGauss:</p>
       <Badge
         status="default"
-        text="code needs to be written to compare the packages built twice here against newly built packages from the Official openEuler repositories."
+        text="code needs to be written to compare the packages built twice here against newly built packages from the Official openGauss repositories."
       />
       <br />
       <Badge
@@ -42,7 +42,7 @@
         text="user tools, for users to verify all of this easily."
       />
       <p class="innerTitle2">
-        If you want to help out or discuss reproducible builds in openEuler,
+        If you want to help out or discuss reproducible builds in openGauss,
         please join #reproducible-builds.
       </p>
     </div>
@@ -144,7 +144,7 @@
         v-show="showSmallPicture.picture5"
       ></div>
     </div>
-    <div id="openEuler" class="openEulerDiv" v-show="showMainPicture"></div>
+    <div id="openGauss" class="openGaussDiv" v-show="showMainPicture"></div>
     <div class="variation">
       <Table :columns="variationTableColumns" :data="variationTableData">
       </Table>
@@ -285,7 +285,7 @@ export default {
       },
       showMainPicture: false,
       echartsInstance: {
-        openEuler: null,
+        openGauss: null,
         picture1: null,
         picture2: null,
         picture3: null,
@@ -339,7 +339,7 @@ export default {
                   term1: params.column.title,
                   type: that.$route.query.type
                     ? that.$route.query.type
-                    : 'openEuler',
+                    : 'openGauss',
                 },
               });
             },
@@ -372,7 +372,7 @@ export default {
             });
             this.smallPicEchartParam[i].categoryLevel = v.categoryLevel;
             this.smallPicEchartParam[i].options = {
-              text: `Reproducibility status for openEuler packages in ${v.categoryLevel}`,
+              text: `Reproducibility status for openGauss packages in ${v.categoryLevel}`,
               textFontSize: 8,
               show: false,
               nameGap: 30,
@@ -393,7 +393,7 @@ export default {
           query: {
             term1: col,
             term2: row.categoryLevel,
-            type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+            type: this.$route.query.type ? this.$route.query.type : 'openGauss',
           },
         });
       } else {
@@ -401,7 +401,7 @@ export default {
           name: 'detail',
           query: {
             term2: row.categoryLevel,
-            type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+            type: this.$route.query.type ? this.$route.query.type : 'openGauss',
           },
         });
       }
@@ -557,8 +557,8 @@ export default {
           });
           if (this.showMainPicture) {
             this.$nextTick(() => {
-              this.initECharts('openEuler', res, {
-                text: 'Reproducibility status for all tested openEuler packages',
+              this.initECharts('openGauss', res, {
+                text: 'Reproducibility status for all tested openGauss packages',
                 titleFontSize: 16,
                 textFontSize: 12,
                 show: true,
@@ -631,7 +631,7 @@ export default {
       },
       {
         variation: 'domain name',
-        firstBuild: 'is not yet varied  between rebuilds of openEuler',
+        firstBuild: 'is not yet varied  between rebuilds of openGauss',
         secondBuild: '',
       },
       {
@@ -651,7 +651,7 @@ export default {
       },
       {
         variation: 'the build path',
-        firstBuild: 'is not yet varied between rebuilds of openEuler',
+        firstBuild: 'is not yet varied between rebuilds of openGauss',
         secondBuild: '',
       },
       {
@@ -785,7 +785,7 @@ export default {
     }
   }
 
-  .openEulerDiv {
+  .openGaussDiv {
     margin-top: 30px;
     height: 716px;
   }
