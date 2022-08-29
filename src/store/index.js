@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     testedSuite: '',
     architecture: 'amd64',
-    urlParam: 'openGauss',
+    urlParam: 'mindSpore',
   },
   mutations: {
     changeTestedSuiteVx(state, payload) {
