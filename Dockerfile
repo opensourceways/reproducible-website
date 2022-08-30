@@ -3,6 +3,8 @@ FROM openeuler/openeuler:22.03-lts
 USER root
 ENV USER root
 
+FROM nginx:latest
+
 ADD ./etc/nginx-reproducible.conf /etc/nginx/conf.d/nginx-reproducible.conf
 COPY dist /var/www/html
 
