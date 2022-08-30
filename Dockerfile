@@ -3,7 +3,7 @@ FROM openeuler/openeuler:22.03-lts
 USER root
 ENV USER root
 
-ADD ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+ADD ./etc/nginx-reproducible.conf /etc/nginx/conf.d/nginx-reproducible.conf
 COPY dist /var/www/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
