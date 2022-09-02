@@ -5,7 +5,7 @@ ENV USER root
 
 FROM nginx:latest
 
-ADD ./etc/nginx-reproducible.conf /etc/nginx/conf.d/nginx-reproducible.conf
+COPY ./etc/nginx-reproducible.conf /etc/nginx/conf.d/nginx-reproducible.conf
 COPY dist /var/www/html
 
 EXPOSE 80
