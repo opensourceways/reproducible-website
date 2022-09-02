@@ -5,7 +5,7 @@ import axios from 'axios';
 //       ? 'https://reproducible-builds.openeuler.org/api/'
 //       : '/api/',
 const server = axios.create({
-  baseURL: 'https://reproducible-builds.openeuler.org/api/',
+  baseURL: 'https://reproducible-builds.openeuler.org/',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
