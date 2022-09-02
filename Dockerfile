@@ -1,0 +1,12 @@
+FROM openeuler/openeuler:22.03-lts
+# Set env
+USER root
+ENV USER root
+
+FROM nginx:latest
+
+COPY ./etc/nginx-reproducible.conf /etc/nginx/conf.d/nginx-reproducible.conf
+COPY dist /var/www/mindSpore/
+
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
