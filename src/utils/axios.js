@@ -3,7 +3,8 @@ import axios from 'axios';
 const server = axios.create({
   baseURL:
     process.env.NODE_ENV === 'production'
-      ? 'http://124.71.172.144:80/api/'
+      ? // ? 'http://124.71.172.144:80/api/'
+        process.env.BACKEND_URL + '/api/'
       : '/api/',
   withCredentials: true,
   headers: {
