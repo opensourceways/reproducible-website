@@ -1,12 +1,11 @@
 import axios from 'axios';
 
-
 // `${process.env.BACKEND_URL}/api/`
+// process.env.NODE_ENV === 'production'
+//       ? 'https://reproducible-builds.openeuler.org/api/'
+//       : '/api/',
 const server = axios.create({
-  baseURL:
-    process.env.NODE_ENV === 'production'
-      ? 'https://reproducible-builds.openeuler.org/api/'
-      : '/api/',
+  baseURL: 'https://reproducible-builds.openeuler.org/api/',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
