@@ -1,9 +1,11 @@
 import axios from 'axios';
 
+
+// `${process.env.BACKEND_URL}/api/`
 const server = axios.create({
   baseURL:
     process.env.NODE_ENV === 'production'
-      ? `${process.env.BACKEND_URL}/api/`
+      ? 'https://reproducible-builds.openeuler.org/api/'
       : '/api/',
   withCredentials: true,
   headers: {
