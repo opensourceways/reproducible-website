@@ -1,6 +1,6 @@
 module.exports = {
   productionSourceMap: false,
-  publicPath: '/openGauss/',
+  // publicPath: '/openGauss/',
   devServer: {
     host: '0.0.0.0',
     port: 8080,
