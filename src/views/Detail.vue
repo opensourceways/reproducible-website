@@ -108,15 +108,15 @@
           <div v-for="(result, index) in row.testResult" :key="index">
             <div
               v-if="
-                result.search(/.rpm/) >= 0 &&
+                result.search(/(.rpm|.whl)/) >= 0 &&
                 row.testStatus !== 'failing to build'
               "
             >
               <img class="testResultImg" :src="getImgSrc(result)" />
               <a @click="clickTestResult(row, getStatus(result), index)">{{
-                result.slice(0, result.search(/.rpm/) + 4)
+                result.slice(0, result.search(/(.rpm|.whl)/) + 4)
               }}</a
-              >{{ result.slice(result.search(/.rpm/) + 4) }}
+              >{{ result.slice(result.search(/(.rpm|.whl)/) + 4) }}
             </div>
             <div v-else>
               <img class="testResultImg" :src="getImgSrc(result)" />
