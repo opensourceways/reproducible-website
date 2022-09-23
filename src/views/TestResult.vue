@@ -69,7 +69,7 @@ export default {
       return str.slice(str.lastIndexOf('/') + 1);
     },
     rpmName(str) {
-      return str.slice(0, str.search(/.rpm/) + 4);
+      return str.slice(0, str.search(/(.rpm|.whl)/) + 4);
     },
     init() {
       this.resultIndex = this.$route.params.resultIndex;
