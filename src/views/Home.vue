@@ -143,8 +143,7 @@ export default {
       'changeUrlParamVx',
     ]),
     changeArchitecture(data) {
-      console.log(data);
-      // this.changeArchitectureVx({ architecture: data });
+      this.changeArchitectureVx({ architecture: data });
     },
     changeTestedSuites(data) {
       this.changeTestedSuiteVx({ testedSuite: data });
