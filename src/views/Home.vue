@@ -69,6 +69,15 @@
             <img src="@/assets/链接.png" />
             <a
               class="link"
+              href="https://github.com/7Light/reproducibleopeneuler"
+              target="_blank"
+              >reproducible-openeuler</a
+            >
+          </div>
+          <div class="linkBox">
+            <img src="@/assets/链接.png" />
+            <a
+              class="link"
               href="https://reproducible-builds.org"
               target="_blank"
               >reproducible-builds.org</a
