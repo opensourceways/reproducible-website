@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     testedSuite: '',
     architecture: 'arm64',
-    urlParam: 'openEuler',
+    // urlParam: 'openEuler',
+    urlParam: 'obs',
   },
   mutations: {
     changeTestedSuiteVx(state, payload) {
