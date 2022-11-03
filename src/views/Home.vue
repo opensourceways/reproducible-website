@@ -162,7 +162,8 @@ export default {
       this.$router.push({
         path: '/',
         query: {
-          type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+          // type: this.$route.query.type ? this.$route.query.type : 'openEuler',
+          type: this.$route.query.type ? this.$route.query.type : 'obs',
         },
       });
     },

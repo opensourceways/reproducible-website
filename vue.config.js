@@ -10,7 +10,8 @@ module.exports = {
     proxy: {
       '/api': {
         // target: 'http://192.168.0.16:9991/',
-        target: 'http://124.71.172.144:80/', // 华为云
+        // target: 'http://124.71.172.144:80/', // 华为云
+        target: 'https://reproducible-builds.openeuler.org', // 华为云
         // pathRewrite: {
         //   '^/api': '',
         // },
